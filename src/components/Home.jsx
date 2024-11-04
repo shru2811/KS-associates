@@ -57,7 +57,7 @@ const Home = () => {
         </div>
 
         {/* Contact Us Side Button - Hidden on mobile */}
-        <button className="hidden lg:block fixed right-0 top-52 -translate-y-1/2 bg-[#50bfbf] text-white text-lg py-3 px-4 rounded-lg transform -rotate-90 translate-x-8 z-50">
+        {/* <button className="hidden lg:block fixed right-0 top-52 -translate-y-1/2 bg-[#50bfbf] text-white text-lg py-3 px-4 rounded-lg transform -rotate-90 translate-x-8 z-50">
         <NavLink to='./contact'>
                     Contact Us
                   </NavLink>
@@ -66,7 +66,7 @@ const Home = () => {
         <a href="https://api.whatsapp.com/send/?phone=917905749502&text&type=phone_number&app_absent=0">
         <FontAwesomeIcon icon={faWhatsapp} className="w-6 h-6 text-white rotate-90" />
         </a>
-        </button>
+        </button> */}
       </div>
       {/* Services */}
       <Services />

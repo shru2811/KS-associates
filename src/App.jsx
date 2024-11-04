@@ -14,6 +14,7 @@ import ContactUs from './pages/ContactUs';
 import NavBar from './components/NavBar';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import SideButtons from './components/SideButtons';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <>
       <ScrollToTop/>
       <NavBar/>
+      <SideButtons/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactUs />} />
@@ -32,8 +34,6 @@ function App() {
           <Route path="/mutual-fund" element={<MutualFund />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
-
-
         </Routes>
         
         <Footer />
