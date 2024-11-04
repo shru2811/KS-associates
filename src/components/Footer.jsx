@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import {  Instagram, Mail, MapPin, Phone, ChevronUp, MessageCircle } from 'lucide-react';
-import NavItem from './NavItem';
+import { Instagram, Mail, MapPin, Phone, ChevronUp, MessageCircle } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -85,17 +84,17 @@ const Footer = () => {
               </span> */}
             </p>
             <p className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
+              <Phone className="min-w-[20px] min-h-[20px] w-5 h-5 lg:w-6 lg:h-6" />
               <a href="tel:7905749502" className="hover:text-[#85bf4b]">7905749502</a>
             </p>
             <p className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
+              <Mail className="min-w-[20px] min-h-[20px] w-5 h-5 lg:w-6 lg:h-6" />
               <a href="mailto:ksassociates.solutions@gmail.com" className="hover:text-[#85bf4b]">
                 ksassociates.solutions@gmail.com
               </a>
             </p>
             <p className="flex items-center gap-2">
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="min-w-[20px] min-h-[20px] w-5 h-5 lg:w-6 lg:h-6" />
               <a href="https://api.whatsapp.com/send/?phone=917905749502&text&type=phone_number&app_absent=0" target='blank' className="hover:text-[#85bf4b]">
               WhatsApp
               </a>
@@ -105,7 +104,7 @@ const Footer = () => {
           {/* Social Media Links */}
           <div className="flex gap-4 mt-6 space-y-4">
           <p className="flex items-center gap-2">
-              <Instagram className="w-5 h-5" />
+              <Instagram className="min-w-[20px] min-h-[20px] w-5 h-5 lg:w-6 lg:h-6" />
               <a href="https://www.instagram.com/ks_associates_services/" className="hover:text-[#85bf4b]">
                 ks_associates_services
               </a>
