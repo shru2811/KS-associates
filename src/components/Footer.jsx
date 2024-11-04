@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, MapPin, Phone, ChevronUp } from 'lucide-react';
+import {  Instagram, Mail, MapPin, Phone, ChevronUp, MessageCircle } from 'lucide-react';
 import NavItem from './NavItem';
 import { NavLink } from 'react-router-dom';
 
@@ -94,25 +94,23 @@ const Footer = () => {
                 ksassociates.solutions@gmail.com
               </a>
             </p>
+            <p className="flex items-center gap-2">
+              <MessageCircle className="w-5 h-5" />
+              <a href="https://api.whatsapp.com/send/?phone=917905749502&text&type=phone_number&app_absent=0" target='blank' className="hover:text-[#85bf4b]">
+              WhatsApp
+              </a>
+            </p>
           </div>
 
           {/* Social Media Links */}
-          <div className="flex gap-4 mt-6">
-            {[
-              { Icon: Facebook, href: '#' },
-              { Icon: Twitter, href: '#' },
-              { Icon: Instagram, href: 'https://www.instagram.com/ks_associates_services/' },
-              { Icon: Linkedin, href: '#' },
-              { Icon: Youtube, href: '#' },
-            ].map(({ Icon, href }, index) => (
-              <a
-                key={index}
-                href={href}
-                className="text-white hover:text-[#85bf4b] transition-colors"
-              >
-                <Icon className="w-6 h-6" />
+          <div className="flex gap-4 mt-6 space-y-4">
+          <p className="flex items-center gap-2">
+              <Instagram className="w-5 h-5" />
+              <a href="https://www.instagram.com/ks_associates_services/" className="hover:text-[#85bf4b]">
+                ks_associates_services
               </a>
-            ))}
+            </p>
+            
           </div>
         </div>
       </div>
@@ -129,7 +127,7 @@ const Footer = () => {
               Privacy Policy
             </NavLink>
           </div>
-          <p>Copyright © {currYear} - KS Associates. All rights reserved | Powered by Techno Exponent</p>
+          <p>Copyright © {currYear} - KS Associates. All rights reserved</p>
         </div>
       </div>
 
@@ -137,8 +135,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         className="absolute lg:bottom-36 bottom-44 lg:right-16 right-6 bg-[#85bf4b] p-3 lg:p-4 rounded-full text-white transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl animate-bounce cursor-pointer"
-      >
-        <ChevronUp className="w-6 h-6 lg:w-8 lg:h-8" />
+      ><ChevronUp className="w-6 h-6 lg:w-8 lg:h-8" />
       </button>
     </footer>
   );

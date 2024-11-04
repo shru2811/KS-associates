@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {fadeIn} from '../variants'
+import { NavLink } from 'react-router-dom';
 
 const servicesData = [
   { icon: '📄', title: 'IEPF Claim', description: 'If the dividends declared by the company remained unclaimed for seven consecutive years or more...', linkText: 'Read More', linkPath: '/iepf-claim' },
@@ -46,7 +47,7 @@ const Services = () => (
       {servicesData.map((service, index) => (
         <div key={index} className="flex flex-col items-center w-1/3 md:w-1/6 bg-white mx-2 mb-4 md:mb-0 text-center px-1 py-4 rounded-full transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl">
           <div className="text-4xl md:text-5xl mb-2">{service.icon}</div>
-          <p className="text-sm md:text-lg font-bold text-black">{service.title}</p>
+          <NavLink to={service.linkPath}>{service.title}</NavLink>
         </div>
       ))}
     </motion.div>

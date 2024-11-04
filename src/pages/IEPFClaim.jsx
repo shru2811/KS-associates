@@ -19,7 +19,7 @@ const IEPFClaim = () => (
                 variants={fadeIn("up",0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: true}}
+                viewport={{once: false}}
                 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 mb-10 lg:mb-20"
             >
                 Our Services
@@ -30,7 +30,7 @@ const IEPFClaim = () => (
                 variants={fadeIn("up",0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: true}}
+                viewport={{once: false}}
                 className="icon-list flex justify-center mb-8 md:mb-12 flex-wrap gap-4"
             >
                 {servicesData.map((service, index) => (
@@ -52,7 +52,7 @@ const IEPFClaim = () => (
                 variants={fadeIn("up",0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: true}}  
+                viewport={{once: false}}  
                 className="text-3xl sm:text-4xl lg:text-5xl text-[#2A2665] font-bold mb-4"
             >
                 IEPF Claim
@@ -63,7 +63,7 @@ const IEPFClaim = () => (
                 variants={fadeIn("left",0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: true}}
+                viewport={{once: false}}
                 className='mt-8 lg:mt-16 flex flex-col lg:flex-row gap-6 lg:gap-10'
             >
                 <img src="/iepf.png" className='rounded-full w-full lg:w-1/2 h-auto object-cover' alt="IEPF" />
@@ -78,7 +78,7 @@ const IEPFClaim = () => (
             variants={fadeIn("right",0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true}}
+            viewport={{once: false}}
             className='mt-8 lg:mt-16 flex flex-col-reverse lg:flex-row gap-6 lg:gap-10'>
                 <p className="text-lg sm:text-xl my-4 lg:my-6">
                     <span className='text-xl sm:text-2xl font-bold text-[#85bf4b]'>When do the shares & dividends get transferred to IEPF?</span>
@@ -92,7 +92,7 @@ const IEPFClaim = () => (
             variants={fadeIn("left",0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true}}
+            viewport={{once: false}}
             className='mt-8 lg:mt-16 flex flex-col lg:flex-row gap-6 lg:gap-10'>
                 <img src="/iepf2.jpg" className='rounded-full w-full lg:w-1/2 h-52 object-cover' alt="IEPF Claim Process" />
                 <p className="text-lg sm:text-xl my-4 lg:my-6">
@@ -106,7 +106,7 @@ const IEPFClaim = () => (
             variants={fadeIn("right",0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true}}
+            viewport={{once: false}}
             className='mt-8 lg:mt-16 flex flex-col-reverse lg:flex-row gap-6 lg:gap-10'>
                 <div className="text-lg sm:text-xl my-4 lg:my-6">
                     <span className='text-xl sm:text-2xl font-bold text-[#85bf4b]'>What documents are required to be submitted with Form IEPF-5?</span>

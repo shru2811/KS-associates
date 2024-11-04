@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, Menu, X } from 'lucide-react';
 import NavItem from './NavItem';
-import Services from './Services';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
@@ -12,12 +11,13 @@ const NavBar = () => {
   };
 
   const servicesData = [
-    { icon: '📄', title: 'IEPF Claim', description: 'If the dividends...', linkText: 'Read More', linkPath: '/iepf-claim' },
-    { icon: '📑', title: 'Duplicate Issue of Shares', description: 'Losing important...', linkText: 'Read More', linkPath: '/duplicate-issue' },
-    { icon: '📜', title: 'Transmission of Shares', description: 'When it comes to...', linkText: 'Read More', linkPath: '/transmission' },
-    { icon: '🔒', title: 'Insurance Claim', description: 'Insurance amount...', linkText: 'Read More', linkPath: '/insurance-claim' },
-    { icon: '📈', title: 'Mutual Fund Redemption', description: 'Mutual funds play...', linkText: 'Read More', linkPath: '/mutual-fund' },
-];
+    { title: 'IEPF Claim', linkPath: '/iepf-claim' },
+    { title: 'Duplicate Issue of Shares', linkPath: '/duplicate-issue' },
+    { title: 'Transmission of Shares', linkPath: '/transmission' },
+    { title: 'Insurance Claim', linkPath: '/insurance-claim' },
+    { title: 'Mutual Fund Redemption', linkPath: '/mutual-fund' },
+  ];
+
   return (
     <>
       {/* Top Bar */}
@@ -47,11 +47,13 @@ const NavBar = () => {
         <div className="container mx-auto px-4 py-1">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <img
-                src="/logo-png.png"
-                alt="Logo"
-                className="h-16 w-32 sm:h-20 sm:w-40"
-              />
+              <NavLink to='/'>
+                <img
+                  src="/logo-png.png"
+                  alt="Logo"
+                  className="h-16 w-32 sm:h-20 sm:w-40"
+                />
+              </NavLink>
             </div>
 
             {/* Mobile menu button */}
@@ -59,10 +61,7 @@ const NavBar = () => {
               className="lg:hidden text-white p-2"
               onClick={toggleMenu}
             >
-              {isMenuOpen ?
-                <X className="h-6 w-6" /> :
-                <Menu className="h-6 w-6" />
-              }
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
             {/* Desktop Navigation */}
@@ -81,15 +80,8 @@ const NavBar = () => {
               </NavLink>
               <NavItem
                 text="Services"
-                destination={"services-section"}
                 hasDropdown
-                dropdownItems={[
-                  { label: 'IEPF Claim' },
-                  { label: 'Duplicate Issue of Shares' },
-                  { label: ' Transmission of Shares' },
-                  { label: ' Insurance Claim' },
-                  { label: 'Mutual Fund Redemption' }
-                ]}
+                dropdownItems={servicesData} // Pass the services data here
               />
             </div>
           </div>
@@ -114,11 +106,15 @@ const NavBar = () => {
               <div className="text-white text-lg font-semibold">
                 Services
                 <div className="pl-4 mt-2 space-y-2">
-                {servicesData.map((service, index) => (
-                    <div key={index} className="flex flex-col items-center   text-center py-1 transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl">
-                        <p className="text-gray-300 hover:text-[#50bfbf] transition-colors duration-300"><NavLink to={service.linkPath}>{service.title}</NavLink></p>
+                  {servicesData.map((service, index) => (
+                    <div key={index} className="flex flex-col items-center text-center py-1 transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl">
+                      <p className="text-gray-300 hover:text-[#50bfbf] transition-colors duration-300">
+                        <NavLink to={service.linkPath} onClick={() => setIsMenuOpen(false)}>
+                          {service.title}
+                        </NavLink>
+                      </p>
                     </div>
-                ))}
+                  ))}
                 </div>
               </div>
             </div>

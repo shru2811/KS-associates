@@ -30,27 +30,27 @@ const GoogleReviews = () => {
     {
       author: "G. Bhuvnesh",
       timeAgo: "7 months ago",
-      content: "Despite covid pandemic, Share Samadhan completed the job within time period. They are thorough professionals, and always transparent about the development in work. They have a system of giving monthly status report. Amazed to see their working style. Thorough professional company."
+      content: "Despite covid pandemic, KS associates completed the job within time period. They are thorough professionals, and always transparent about the development in work. They have a system of giving monthly status report. Amazed to see their working style. Thorough professional company."
     },
     {
       author: "Madhusudan Joshi",
       timeAgo: "a year ago",
-      content: "Share Samadhan is a fantastic organization. They helped me dematerialize my physical shares held jointly with great ease. Excellent customer support from beginning to end. Their responses were prompt and professional. I strongly recommend them unreservedly. Thanks again team Share Samadhan!"
+      content: "KS associates is a fantastic organization. They helped me dematerialize my physical shares held jointly with great ease. Excellent customer support from beginning to end. Their responses were prompt and professional. I strongly recommend them unreservedly. Thanks again team KS associates!"
     },
     {
       author: "Vaibhav Swamy",
       timeAgo: "4 months ago",
-      content: "Transmission of shares is a marathon project that needs expertise and a diligent working team. I have got Entitlement Letters for 7 out of the 10 companies that I had approached Share Samadhan for in a very short time. Apart from that they helped me claim MFs, Bonds and Savings Balances which were really old! SS is doing a lovely service to help us ease our stress and recover our funds. Thank you guys!! All the best!"
+      content: "Transmission of shares is a marathon project that needs expertise and a diligent working team. I have got Entitlement Letters for 7 out of the 10 companies that I had approached KS associates for in a very short time. Apart from that they helped me claim MFs, Bonds and Savings Balances which were really old! SS is doing a lovely service to help us ease our stress and recover our funds. Thank you guys!! All the best!"
     },
     {
       author: "Prateek V",
       timeAgo: "4 months ago",
-      content: "Share Samadhan did a fantastic job of recovering my mothers shares that were stuck in IEPF. They gave regular timely updates. They navigated the bureaucratic maze of documentation. Save yourself the hassle of doing share recovery of old shares by yourself.. Just go with Share Samadhan!"
+      content: "KS associates did a fantastic job of recovering my mothers shares that were stuck in IEPF. They gave regular timely updates. They navigated the bureaucratic maze of documentation. Save yourself the hassle of doing share recovery of old shares by yourself.. Just go with KS associates!"
     },
     {
       author: "Parameshwar S",
       timeAgo: "5 months ago",
-      content: "My father bought a very good amount of SBI shares in 1999. I came across those shares after he passed away. I reached out to Share Samadhan, in about 6 months shares got successfully transferred to my demat account. Thank you Share Samadhan for getting it done. If anyone would like to opt their services, you can go for it. Highly recommended."
+      content: "My father bought a very good amount of SBI shares in 1999. I came across those shares after he passed away. I reached out to KS associates, in about 6 months shares got successfully transferred to my demat account. Thank you KS associates for getting it done. If anyone would like to opt their services, you can go for it. Highly recommended."
     }
   ];
 
