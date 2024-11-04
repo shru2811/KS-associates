@@ -14,7 +14,7 @@ const servicesData = [
 
 const InsuranceClaim = () => (
   <div style={{ background: 'linear-gradient(to bottom, #d1e7f9, #ffffff)' }}>
-    <div className="service-details container mx-auto px-4 py-8 md:py-10">
+    <div className="service-details overflow-x-hidden container mx-auto px-4 py-8 md:py-10">
       <motion.h2 
             variants={fadeIn("up",0.2)}
             initial="hidden"
