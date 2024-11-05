@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Instagram, Mail, MapPin, Phone, ChevronUp, MessageCircle } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
+
 const Footer = () => {
   const today = new Date();
   const currYear = today.getFullYear();
@@ -126,6 +127,7 @@ const Footer = () => {
               Privacy Policy
             </NavLink>
           </div>
+          
           <p>Copyright © {currYear} - KS Associates. All rights reserved</p>
         </div>
       </div>
