@@ -4,8 +4,8 @@ import NavItem from './NavItem';
 import Services from './Services';
 import { NavLink } from 'react-router-dom';
 import GoogleReviews from './GoogleReviews';
-import {motion} from 'framer-motion';
-import {fadeIn} from '../variants';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -13,18 +13,18 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <div 
-      
-      className="relative min-h-[500px]" style={{ background: 'linear-gradient(to right, #a8e6e6, #c1e6a6)' }}>
+      <div
+
+        className="relative min-h-[500px]" style={{ background: 'linear-gradient(to right, #a8e6e6, #c1e6a6)' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-20">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
-              <motion.h1 
-              variants={fadeIn("right",0.2)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{once: false}}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2A2665] leading-tight mb-8">
+              <motion.h1
+                variants={fadeIn("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2A2665] leading-tight mb-8">
                 India's largest and most trusted platform for recovery of shares and dividends from IEPF
               </motion.h1>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
@@ -33,19 +33,25 @@ const Home = () => {
                     Contact Us
                   </NavLink>
                 </button>
-                <button className="bg-[#85bf4b] text-white px-6 py-3 rounded-full flex items-center justify-center transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl hover:bg-opacity-90">
-                  <Phone className="w-5 h-5 mr-2" />
-                  <a href="tel:7905749502">Call Now</a>
+                <button >
+                  <a
+                    href="tel:7905749502"
+                    className="bg-[#85bf4b] text-white px-6 py-3 rounded-full flex items-center justify-center transition-transform duration-300 transform hover:scale-105 hover:shadow hover:shadow-2xl hover:bg-opacity-90"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now
+                  </a>
+
                 </button>
               </div>
             </div>
             <div className="lg:w-1/2 relative flex justify-end">
               <div className="relative">
                 <motion.img
-                variants={fadeIn("left",0.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false}}
+                  variants={fadeIn("left", 0.2)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: false }}
                   src="/homeImg.jpg"
                   alt="financial independence"
                   className="rounded-3xl h-96 shadow-2xl"

@@ -15,7 +15,7 @@ const SideButtons = () => {
 
       {/* WhatsApp Button */}
       <button className="fixed right-5 md:right-6 top-80 md:top-96 bg-[#85bf4b] text-white text-sm md:text-lg py-2 px-2 md:py-3 md:px-3 rounded-lg transform -rotate-90 translate-x-6 md:translate-x-8 z-50">
-        <a href="https://api.whatsapp.com/send/?phone=917905749502&text&type=phone_number&app_absent=0">
+        <a href="https://api.whatsapp.com/send/?phone=917905749502&text&type=phone_number&app_absent=0" target='_blank'>
           <FontAwesomeIcon icon={faWhatsapp} className="w-5 h-5 md:w-6 md:h-6 text-white rotate-90" />
         </a>
       </button>

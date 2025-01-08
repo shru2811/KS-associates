@@ -106,7 +106,7 @@ const Footer = () => {
           <div className="flex gap-4 mt-6 space-y-4">
           <p className="flex items-center gap-2">
               <Instagram className="min-w-[20px] min-h-[20px] w-5 h-5 lg:w-6 lg:h-6" />
-              <a href="https://www.instagram.com/ks_associates_services/" className="hover:text-[#85bf4b]">
+              <a href="https://www.instagram.com/ks_associates_services/" className="hover:text-[#85bf4b]" target="_blank">
                 ks_associates_services
               </a>
             </p>
