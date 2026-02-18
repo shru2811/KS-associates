@@ -1,8 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
     const form = useRef();
+
     const [formData, setFormData] = useState({
         user_name: '',
         user_email: '',
@@ -10,7 +11,16 @@ const ContactUs = () => {
         user_city: '',
         user_message: ''
     });
-    const [status, setStatus] = useState({ message: '', isError: false });
+
+    const [status, setStatus] = useState({
+        message: '',
+        isError: false
+    });
+
+    // ✅ Initialize EmailJS (logic update only)
+    useEffect(() => {
+        emailjs.init('Bw1m6Vnuzsssk9QHy'); // your public key
+    }, []);
 
     const handleChange = (e) => {
         setFormData({
@@ -25,22 +35,24 @@ const ContactUs = () => {
 
         emailjs
             .sendForm(
-                'service_ixad5uk',
+                'service_ji1awnj',
                 'template_r56r3pn',
-                form.current,
-                {
-                    publicKey: 'f0h3zkkQcTp_zMqe5',
-                    to_email: 'ksassociates.solutions@gmail.com'
-                }
+                form.current
             )
             .then(
                 () => {
                     setStatus({ message: 'Message sent successfully!', isError: false });
-                    setFormData({ user_name: '', user_email: '', user_phone: '', user_city: '', user_message: '' });
+                    setFormData({
+                        user_name: '',
+                        user_email: '',
+                        user_phone: '',
+                        user_city: '',
+                        user_message: ''
+                    });
                 },
                 (error) => {
+                    console.error('EmailJS Error:', error);
                     setStatus({ message: 'Failed to send message. Please try again.', isError: true });
-                    console.log('FAILED...', error.text);
                 }
             );
     };
@@ -48,15 +60,18 @@ const ContactUs = () => {
     return (
         <div className="p-4 md:p-6 text-center font-sans" style={{ background: 'linear-gradient(to bottom, #d1e7f9, #ffffff)' }}>
             {/* Responsive header */}
-            <h1 className="text-4xl md:text-7xl font-black my-6 md:my-10 py-24 md:py-36 bg-cover bg-center bg-no-repeat bg-[url('/contact.png')] text-white">Contact Us</h1>
-            
+            <h1 className="text-4xl md:text-7xl font-black my-6 md:my-10 py-24 md:py-36 bg-cover bg-center bg-no-repeat bg-[url('/contact.png')] text-white">
+                Contact Us
+            </h1>
+
             <div className="flex justify-center items-center min-h-[500px] px-2 md:px-4 my-4">
                 <div className="flex flex-col md:flex-row max-w-6xl w-full shadow-2xl rounded-xl">
+
                     {/* Left Side - Contact Info */}
                     <div className="bg-[#211C6A] p-6 md:p-8 text-white w-full md:w-[40%] rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Connect with us</h2>
                         <h3 className="text-lg md:text-xl mb-4">KS Associates Limited</h3>
-                        
+
                         <div className="space-y-4 md:space-y-6">
                             <div className="flex items-center gap-3 text-sm md:text-base">
                                 <div className="bg-[#85bf4b] rounded-full p-2 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center flex-shrink-0">
@@ -67,7 +82,7 @@ const ContactUs = () => {
                                 </div>
                                 <span className="break-all">ksassociates.solutions@gmail.com</span>
                             </div>
-                            
+
                             <div className="flex items-center gap-3 text-sm md:text-base">
                                 <div className="bg-[#85bf4b] rounded-full p-2 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center flex-shrink-0">
                                     <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -76,7 +91,7 @@ const ContactUs = () => {
                                 </div>
                                 <span>www.KSAssociates.com</span>
                             </div>
-                            
+
                             <div className="flex items-center gap-3 text-sm md:text-base">
                                 <div className="bg-[#85bf4b] rounded-full p-2 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center flex-shrink-0">
                                     <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -90,14 +105,16 @@ const ContactUs = () => {
 
                     {/* Right Side - Form */}
                     <div className="bg-white p-6 md:p-8 w-full md:w-[60%] rounded-b-xl md:rounded-r-xl md:rounded-bl-none">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-[#074173]">Submit Your Query</h2>
-                        
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-[#074173]">
+                            Submit Your Query
+                        </h2>
+
                         <form ref={form} onSubmit={sendEmail} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                 <div className="text-left">
                                     <label className="block text-gray-600 mb-2 text-base md:text-lg font-bold">Name</label>
-                                    <input 
-                                        type="text" 
+                                    <input
+                                        type="text"
                                         name="user_name"
                                         value={formData.user_name}
                                         onChange={handleChange}
@@ -109,8 +126,8 @@ const ContactUs = () => {
 
                                 <div className="text-left">
                                     <label className="block text-gray-600 mb-2 text-base md:text-lg font-bold">Email</label>
-                                    <input 
-                                        type="email" 
+                                    <input
+                                        type="email"
                                         name="user_email"
                                         value={formData.user_email}
                                         onChange={handleChange}
@@ -126,8 +143,8 @@ const ContactUs = () => {
                                         <span className="inline-flex items-center px-3 text-sm md:text-base bg-gray-50 border border-r-0 border-gray-300 rounded-l-md">
                                             +91
                                         </span>
-                                        <input 
-                                            type="tel" 
+                                        <input
+                                            type="tel"
                                             name="user_phone"
                                             value={formData.user_phone}
                                             onChange={handleChange}
@@ -140,8 +157,8 @@ const ContactUs = () => {
 
                                 <div className="text-left">
                                     <label className="block text-gray-600 mb-2 text-base md:text-lg font-bold">City</label>
-                                    <input 
-                                        type="text" 
+                                    <input
+                                        type="text"
                                         name="user_city"
                                         value={formData.user_city}
                                         onChange={handleChange}
@@ -154,7 +171,7 @@ const ContactUs = () => {
 
                             <div className="text-left">
                                 <label className="block text-gray-600 mb-2 text-base md:text-lg font-bold">Your Query</label>
-                                <textarea 
+                                <textarea
                                     name="user_message"
                                     value={formData.user_message}
                                     onChange={handleChange}
@@ -171,7 +188,7 @@ const ContactUs = () => {
                             )}
 
                             <div>
-                                <button 
+                                <button
                                     type="submit"
                                     className="w-full bg-[#211C6A] py-2.5 md:py-3 rounded-xl text-lg md:text-xl text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:bg-opacity-90"
                                 >
